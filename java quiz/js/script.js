@@ -10,7 +10,7 @@ let questions = quiz.sort(function(){
     return 0.5 - Math.random();
 });
 
-let totalquestions = questions.length;
+let totalquestion = questions.length;
 
 
 $(function(){
@@ -30,7 +30,7 @@ sec = totaltime - min * 60 - counter;
 $(".timerbox span").text(min + ":" + sec);
 
 if (counter == totaltime){
-    alert("time up press ok to show result");
+    alert("time up press ok to show result.");
     result();
     clearInterval(timer);
 }
@@ -60,18 +60,18 @@ function printQuestion(i){
 }
 // scheck answer start
 
-function checkanswer(option){
+function checkAnswer(option){
  attempt++;
 
  let optionClicked = $(option).data("opt");
 //  console.log(question[index]);
 
  if(optionClicked == questions[index].answer){
-     $(option).addclass("right");
+     $(option).addClass("right");
      score++;
  }
  else{
-    $(option).addclass("wrong");
+    $(option).addClass("wrong");
     wrong++;
  }
  $(".scorebox span").text(score);
@@ -88,9 +88,11 @@ if(index >= questions.length - 1){
     return;
 }
 
+ 
+
     index++;
 
-    $(".optionbox span").removeclass();
+    $(".optionbox span").removeClass();
 
     $(".optionbox span").attr("onclick","checkAnswer(this)");
 
@@ -103,24 +105,19 @@ function showResult(j){
 
     if(
          j == 1 &&
-         index <questions .length -1 &&
+         index < questions.length - 1 &&
          !confirm(
              "quiz is not finished.press ok to skip quiz  & get your final result."
          )
     ){
         return;
     }
+    result();  
 
-    $("#questionscreen").hide();
-
-    $("#resultscreen").show();
-
-$("totalquestion").text(totalquestion);
-$("attemptquestion").text(attempt);
-$("correctanswers").text(correct);
-$("wronganswers").text(wrong);
+  
 
 }
+    
 
 // result start
 function result(){
@@ -131,7 +128,7 @@ function result(){
 
 $("totalquestion").text(totalquestion);
 $("attemptquestion").text(attempt);
-$("correctanswers").text(correct);
+$("correctanswers").text(score);
 $("wronganswers").text(wrong);
 
 }
