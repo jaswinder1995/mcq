@@ -1,0 +1,99 @@
+
+.box{
+
+    box-shadow: -1px 2px 5px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 2px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 5px 2px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    min-height: 350px;
+    width: 640px;
+    padding: 50px;
+}
+.title{
+    border-bottom: 2px solid rgb(8, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    color:black;
+   padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.header{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between ;
+}
+.scorebox,.timerbox{
+font-weight: 600;
+padding: 10px 10px;
+border: 1px solid black;
+border-radius: 100px;
+}
+.questionbox{
+    background: rgb(50, 38, 116);
+    color: white;
+    padding: 10px;
+}
+.optionbox{
+    display: grid;
+}
+.optionbox span{
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px 0 10px 10px;
+    width: 390px;
+    color: rgb(2, 0, 0);
+    background: white;
+}
+.option1:hover{
+    background: rgb(50, 38, 116);
+    color: white;
+    border: 2px solid white;
+}
+.footer{
+    
+    display: flex;
+    justify-content: space-between ;
+}
+.footer button{
+font-weight: 600;
+margin-top: 40px;
+
+padding: 7px  15px;
+background: rgb(50, 38, 116);
+margin-bottom: 20px;
+font-size: 20px;
+border:2px solid white;
+color:white;
+}
+.resultbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap:15px ;
+    font-size: 20px;
+    
+}
+.resultbox span{
+    font-weight: 600;
+}
+.buttonbox{
+    margin-bottom: 30px;
+}
+.buttonbox a{
+background:white;
+border-radius: 50px;
+border: 0;
+text-decoration: none;
+color:rgb(50, 38, 116);
+outline: none;
+padding: 7px 15px;
+}
+.optionbox span.right{
+background: green;
+color: white;
+}
+.optionbox span.wrong{
+    background: red;
+    color: white;
+}
